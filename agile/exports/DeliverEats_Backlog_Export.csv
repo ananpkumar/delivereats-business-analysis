@@ -1,0 +1,164 @@
+﻿Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Labels,Labels,Labels,Labels,Labels,Labels,Description,Environment,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Attachment,Custom field (Development),Custom field (Issue color),Custom field (Rank),Sprint,Custom field (Start date),Custom field (Story point estimate),Custom field (Team),Custom field (Vulnerability),Parent,Parent key,Parent summary,Status category,Status category changed
+Account & Access,DE-6,10009,Epic,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,,Done,,,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:58 PM,,06/Nov/26 9:58 PM,,0,BR-01,FR-01,FR-02,,,,"Business requirement: BR-01 - Customers must be able to register and log in. Restaurants and delivery partners must be able to log in.
+Functional requirements: FR-01, FR-02
+Use cases: UC-01 Register, UC-02 Verify OTP, UC-03 Login
+Business rules: RULE-01
+UAT: UAT-01, UAT-02",,0,0,0,,0,0,0,,,{},,0|i00015:,,,,,,,,,Done,06/Nov/26 9:58 PM
+Register with mobile number and email,DE-11,10025,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:27 PM,06/Nov/26 7:41 PM,06/Nov/26 9:27 PM,,0,BR-01,FR-01,RULE-01,UAT-01,UC-01,,"As a customer, I want to register with my mobile number and email, so that I can create an account and order food.
+
+Acceptance criteria
+- Given I enter a valid unregistered mobile number and email, When I tap Get OTP, Then an OTP is sent by SMS.
+- Given the registration details are invalid or the email already exists, Then an error is shown and no account is created (RULE-01).
+
+Traceability: BR-01, FR-01, UC-01, RULE-01, UAT-01",,0,0,0,,0,0,0,,06/Nov/26 9:07 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Login_Registration.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10000,{},,0|i0001b:,DE Sprint 1,,5.0,,,10009,DE-6,Account & Access,Done,06/Nov/26 9:27 PM
+Verify OTP to complete registration,DE-12,10015,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:27 PM,06/Nov/26 9:07 PM,06/Nov/26 9:27 PM,,0,BR-01,FR-01,RULE-01,UAT-01,UC-02,,"As a customer, I want to verify the OTP I receive, so that my mobile number is confirmed.
+
+Acceptance criteria
+- Given I enter the correct OTP, When I tap Verify OTP and Register, Then my account is created and I can log in.
+- Given I enter an invalid OTP, Then an error is shown and the account is not created.
+
+Traceability: BR-01, FR-01, UC-02, RULE-01, UAT-01",,0,0,0,,0,0,0,,06/Nov/26 9:07 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Login_Registration.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10001,{},,0|i0001e:,DE Sprint 1,,3.0,,,10009,DE-6,Account & Access,Done,06/Nov/26 9:27 PM
+"Log in as customer, restaurant or delivery partner",DE-13,10027,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:27 PM,06/Nov/26 9:08 PM,06/Nov/26 9:27 PM,,0,BR-01,FR-02,UAT-02,UC-03,,,"As a customer, restaurant or delivery partner, I want to log in securely, so that I can reach my own home screen.
+
+Acceptance criteria
+- Given valid credentials for my role, When I log in, Then my role's home screen opens.
+- Given an invalid password, Then an error is shown and access is denied.
+- Passwords are stored as salted hashes (NFR-04).
+
+Traceability: BR-01, FR-02, UC-03, UAT-02",,0,0,0,,0,0,0,,06/Nov/26 9:08 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Payment_Screen.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10002,{},,0|i0001g:,DE Sprint 1,,3.0,,,10009,DE-6,Account & Access,Done,06/Nov/26 9:27 PM
+Browse restaurants and view menus,DE-14,10016,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,,,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:31 PM,06/Nov/26 9:08 PM,06/Nov/26 9:30 PM,,0,BR-02,FR-03,UAT-03,UC-04,,,"As a customer, I want to browse restaurants and view their menus, so that I can choose what to order.
+
+Acceptance criteria
+- Given I am logged in, When I open Home, Then the restaurant list is displayed and can be searched or scrolled.
+- When I select a restaurant, Then its menu categories and items with prices are shown.
+
+Traceability: BR-02, FR-03, UC-04, UAT-03",,0,0,0,,0,0,0,,06/Nov/26 9:09 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Restaurant_List_Menu.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10003,{},,0|i0001g:9,DE Sprint 2,,5.0,,,10022,DE-7,Ordering,Done,06/Nov/26 9:30 PM
+Add items to cart and view or edit the cart,DE-15,10026,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,,,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:31 PM,06/Nov/26 9:14 PM,06/Nov/26 9:30 PM,,0,BR-03,FR-04,UAT-04,UC-05,UC-06,,"As a customer, I want to add items to a cart and edit it, so that I can review my order before paying.
+
+Acceptance criteria
+- Given I am viewing a menu, When I add items, Then they appear in the cart.
+- When I increase a quantity or remove an item, Then items, quantities and total update correctly after each change.
+
+Traceability: BR-03, FR-04, UC-05, UC-06, UAT-04",,0,0,0,,0,0,0,,06/Nov/26 9:09 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Cart_Checkout.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10004,{},,0|i0001g:i,DE Sprint 2,,5.0,,,10022,DE-7,Ordering,Done,06/Nov/26 9:30 PM
+Place order with delivery address and payment method,DE-16,10028,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,,,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:30 PM,06/Nov/26 9:13 PM,06/Nov/26 9:30 PM,,0,BR-03,FR-05,RULE-08,UAT-05,UC-07,,"As a customer, I want to enter a delivery address and choose a payment method, so that I can place my order.
+
+Acceptance criteria
+- Given my cart is not empty, When I tap Checkout, Then I can enter a delivery address (max 200 characters).
+- Only Google Pay and Paytm are offered; Cash on Delivery is not available (RULE-08).
+- When I tap Place order & pay, Then the order is created with status Pending Payment.
+
+Traceability: BR-03, FR-05, UC-07, RULE-08, UAT-05",,0,0,0,,0,0,0,,,{},,0|i0001h:9,DE Sprint 2,,3.0,,,10022,DE-7,Ordering,Done,06/Nov/26 9:30 PM
+Ordering,DE-7,10022,Epic,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,,Done,,,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:58 PM,,06/Nov/26 9:58 PM,,0,BR-02,BR-03,FR-03,FR-04,FR-05,,"Business requirements: BR-02 (browse restaurants and menus), BR-03 (cart and place order)
+Functional requirements: FR-03, FR-04, FR-05
+Use cases: UC-04, UC-05, UC-06, UC-07
+Business rules: RULE-08 (online payment methods only)
+UAT: UAT-03, UAT-04",,0,0,0,,0,0,0,,,{},,0|i0001i:,,,,,,,,,Done,06/Nov/26 9:58 PM
+Payment & Reversal,DE-8,10023,Epic,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,,Done,,,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:58 PM,,06/Nov/26 9:58 PM,,0,BR-04,FR-06,FR-11,,,,"Business requirement: BR-04 - Pay securely online (Google Pay, Paytm). Payment is returned automatically if an order is rejected or times out.
+Functional requirements: FR-06, FR-11
+Use cases: UC-08 Make Payment, UC-09 Process Payment, UC-14 Reverse Payment
+Business rules: RULE-02, RULE-07, RULE-08
+UAT: UAT-05, UAT-06, UAT-08",,0,0,0,,0,0,0,,,{},,0|i0001p:,,,,,,,,,Done,06/Nov/26 9:58 PM
+Restaurant & Delivery Fulfilment,DE-9,10024,Epic,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,,Done,,,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:58 PM,,06/Nov/26 9:58 PM,,0,BR-05,BR-06,FR-07,FR-08,,,"Business requirements: BR-05 (restaurant accepts/rejects and updates preparation), BR-06 (delivery partner assignment and status)
+Functional requirements: FR-07, FR-08
+Use cases: UC-11, UC-12, UC-13, UC-15, UC-16
+Business rules: RULE-05, RULE-06
+UAT: UAT-07, UAT-09",,0,0,0,,0,0,0,,,{},,0|i0001w:,,,,,,,,,Done,06/Nov/26 9:58 PM
+Order Status & Messages,DE-10,10010,Epic,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,,Done,,,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:58 PM,06/Nov/26 3:45 PM,06/Nov/26 9:58 PM,,0,BR-07,BR-08,FR-09,FR-10,,,"Business requirements: BR-07 (view order status milestones), BR-08 (in-app messages for payment failure and rejection)
+Functional requirements: FR-09, FR-10
+Use cases: UC-10 View Order Status (UC-08 failure message)
+Business rules: RULE-03, RULE-04
+UAT: UAT-06, UAT-08, UAT-10",,0,0,0,,0,0,0,,,{},,0|i0002c:,,,,,,,,,Done,06/Nov/26 9:58 PM
+Restaurant views incoming orders,DE-20,10018,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:39 PM,06/Nov/26 9:15 PM,06/Nov/26 9:39 PM,,0,BR-05,FR-07,UAT-07,UC-11,,,"As a restaurant, I want to see incoming paid orders on my dashboard, so that I can start handling them.
+
+Acceptance criteria
+- Given payment is Successful, Then the order appears on the dashboard with items, customer and amount.
+- Orders with Pending Payment are not visible to the restaurant.
+
+Traceability: BR-05, FR-07, UC-11, UAT-07",,0,0,0,,0,0,0,,06/Nov/26 9:16 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Restaurant_Dashboard.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10005,{},,0|i0002g:,DE Sprint 4,,3.0,,,10024,DE-9,Restaurant & Delivery Fulfilment,Done,06/Nov/26 9:39 PM
+Restaurant accepts or rejects an order within 5 minutes,DE-21,10031,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:39 PM,06/Nov/26 9:16 PM,06/Nov/26 9:39 PM,,0,BR-05,FR-07,RULE-06,UAT-07,UAT-08,UC-12,"As a restaurant, I want to accept or reject an incoming order, so that customers know whether it will be prepared.
+
+Acceptance criteria
+- Given an order is in Placed status, When I accept it within 5 minutes, Then the status becomes Accepted.
+- When I reject it, Then the status becomes Rejected and payment reversal is triggered.
+
+Traceability: BR-05, FR-07, UC-12, RULE-06, UAT-07, UAT-08",,0,0,0,,0,0,0,,,{},,0|i0002i:,DE Sprint 4,,5.0,,,10024,DE-9,Restaurant & Delivery Fulfilment,Done,06/Nov/26 9:39 PM
+Auto-reject order when the restaurant does not respond in 5 minutes,DE-22,10019,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:39 PM,06/Nov/26 9:16 PM,06/Nov/26 9:39 PM,,0,BR-05,FR-07,RULE-06,UAT-08,UC-12,,"As a customer, I want an order to be rejected automatically if the restaurant does not respond, so that I am not left waiting.
+
+Acceptance criteria
+- Given an order is Placed and unanswered for 5 minutes, Then it is automatically set to Rejected (RULE-06).
+- Then payment reversal is triggered and the customer sees a rejection message.
+
+Traceability: BR-05, FR-07, UC-12, RULE-06, UAT-08",,0,0,0,,0,0,0,,06/Nov/26 9:18 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Restaurant_Dashboard.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10006,{},,0|i0002j:,DE Sprint 4,,3.0,,,10024,DE-9,Restaurant & Delivery Fulfilment,Done,06/Nov/26 9:39 PM
+Restaurant updates preparation status,DE-23,10011,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:39 PM,06/Nov/26 9:18 PM,06/Nov/26 9:39 PM,,0,BR-05,FR-07,UAT-07,UC-13,,,"As a restaurant, I want to mark an order as Preparing and Ready for pickup, so that customers and delivery partners can follow progress.
+
+Acceptance criteria
+- Given an order is Accepted, When I mark Preparing, Then the status becomes Preparing.
+- When I mark Ready for pickup, Then the status becomes Ready for Pickup and each change is visible to the customer.
+
+Traceability: BR-05, FR-07, UC-13, UAT-07",,0,0,0,,0,0,0,,06/Nov/26 9:18 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Restaurant_Dashboard.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10007,{},,0|i0002k:,DE Sprint 4,,3.0,,,10024,DE-9,Restaurant & Delivery Fulfilment,Done,06/Nov/26 9:39 PM
+Automatically reverse payment for rejected or timed-out orders,DE-19,10029,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:42 PM,06/Nov/26 9:15 PM,06/Nov/26 9:42 PM,,0,BR-04,FR-11,RULE-07,UAT-08,UC-14,,"As a customer, I want my payment returned automatically if my order is rejected or times out, so that I am not charged for food I do not receive.
+
+Acceptance criteria
+- Given an order is rejected or times out, Then the system requests a full reversal through the payment gateway.
+- Then payment status becomes Refunded and the order status is Rejected (RULE-07).
+- The reversal goes to the original payment method.
+
+Traceability: BR-04, FR-11, UC-14, RULE-07, UAT-08",,0,0,0,,0,0,0,,,{},,0|i0002o:,DE Sprint 5,,8.0,,,10023,DE-8,Payment & Reversal,Done,06/Nov/26 9:42 PM
+Assign ready orders to an available delivery partner,DE-24,10012,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,Medium,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:42 PM,06/Nov/26 9:18 PM,06/Nov/26 9:42 PM,,0,BR-06,FR-08,RULE-05,UAT-09,UC-15,,"As the platform, I want to assign ready orders to an available delivery partner, so that every order can be fulfilled.
+
+Acceptance criteria
+- Given an order is Ready for Pickup, Then it is assigned to an available delivery partner.
+- A partner cannot hold more than one active delivery at a time (RULE-05).
+
+Traceability: BR-06, FR-08, UC-15, RULE-05, UAT-09",,0,0,0,,0,0,0,,06/Nov/26 9:19 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Delivery_Partner_Orders.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10008,{},,0|i0002s:,DE Sprint 5,,5.0,,,10024,DE-9,Restaurant & Delivery Fulfilment,Done,06/Nov/26 9:42 PM
+Delivery partner accepts and picks up an order,DE-25,10032,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,Medium,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:42 PM,06/Nov/26 9:19 PM,06/Nov/26 9:42 PM,,0,BR-06,FR-08,RULE-05,UAT-09,UC-15,,"As a delivery partner, I want to accept an assignment and confirm pickup, so that the restaurant and customer know the food is on its way.
+
+Acceptance criteria
+- Given an order is assigned to me, When I accept and tap Mark as picked up, Then the status becomes Picked Up.
+- If I try to accept a second order while one is active, Then it is blocked.
+
+Traceability: BR-06, FR-08, UC-15, RULE-05, UAT-09",,0,0,0,,0,0,0,,06/Nov/26 9:19 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Delivery_Partner_Orders.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10009,{},,0|i00030:,DE Sprint 5,,3.0,,,10024,DE-9,Restaurant & Delivery Fulfilment,Done,06/Nov/26 9:42 PM
+Delivery partner marks order as delivered,DE-26,10020,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,Medium,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:42 PM,06/Nov/26 9:20 PM,06/Nov/26 9:42 PM,,0,BR-06,FR-08,UAT-09,UC-16,,,"As a delivery partner, I want to mark an order as delivered, so that the order is completed.
+
+Acceptance criteria
+- Given I have picked up an order, When I tap Mark as delivered, Then the order status becomes Delivered.
+
+Traceability: BR-06, FR-08, UC-16, UAT-09",,0,0,0,,0,0,0,,06/Nov/26 9:20 PM;1f3b9ef2-ac53-45f8-92aa-e2992167c229;Delivery_Partner_Orders.png;https://ananpriyakumar-1793956731268.atlassian.net/rest/api/3/attachment/content/10010,{},,0|i00034:,DE Sprint 5,,2.0,,,10024,DE-9,Restaurant & Delivery Fulfilment,Done,06/Nov/26 9:42 PM
+View order status milestones,DE-27,10021,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,Medium,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:44 PM,06/Nov/26 9:20 PM,06/Nov/26 9:44 PM,,0,BR-07,FR-09,RULE-04,UAT-10,UC-10,,"As a customer, I want to see my order's status milestones, so that I know how far along my order is.
+
+Acceptance criteria
+- Given I have an active order, When I open it, Then milestones Placed, Accepted, Preparing, Ready for pickup, Picked up and Delivered are shown with the current step highlighted.
+- The status updates after each change (RULE-04).
+- No live map is shown; live GPS tracking is a future enhancement (FE-01).
+
+Traceability: BR-07, FR-09, UC-10, RULE-04, UAT-10",,0,0,0,,0,0,0,,,{},,0|i00036:,DE Sprint 6,,5.0,,,10010,DE-10,Order Status & Messages,Done,06/Nov/26 9:44 PM
+See in-app message when an order is rejected,DE-29,10014,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,Medium,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:44 PM,06/Nov/26 7:39 PM,06/Nov/26 9:44 PM,,0,BR-08,FR-10,RULE-03,UAT-08,UC-10,,"As a customer, I want an in-app message when my order is rejected, so that I know my payment is being reversed.
+
+Acceptance criteria
+- Given my order is rejected or times out, Then an in-app rejection message is shown immediately (RULE-03).
+- The message says my payment is being reversed and offers to browse other restaurants.
+
+Traceability: BR-08, FR-10, UC-10, RULE-03, UAT-08",,0,0,0,,0,0,0,,,{},,0|i00038:,DE Sprint 6,,2.0,,,10010,DE-10,Order Status & Messages,Done,06/Nov/26 9:44 PM
+Pay online with Google Pay or Paytm,DE-17,10030,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:36 PM,06/Nov/26 9:12 PM,06/Nov/26 9:36 PM,,0,BR-04,FR-06,RULE-02,UAT-05,UC-08,UC-09,"As a customer, I want to pay online with Google Pay or Paytm, so that my order is confirmed securely.
+
+Acceptance criteria
+- Given an order is Pending Payment, When payment succeeds, Then payment status is Successful and order status is Placed.
+- The order is sent to the restaurant only after payment succeeds (RULE-02).
+- No card or UPI credentials are stored by DeliverEats (NFR-09).
+
+Traceability: BR-04, FR-06, UC-08, UC-09, RULE-02, UAT-05",,0,0,0,,0,0,0,,,{},,0|i0003s:,DE Sprint 3,,8.0,,,10023,DE-8,Payment & Reversal,Done,06/Nov/26 9:36 PM
+Retry or cancel after failed payment,DE-18,10017,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,High,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:36 PM,06/Nov/26 7:35 PM,06/Nov/26 9:36 PM,,0,BR-04,FR-06,RULE-02,UAT-06,UC-08,,"As a customer, I want to retry or cancel when my payment fails, so that I do not lose my order.
+
+Acceptance criteria
+- Given my payment fails, Then the order is not sent to the restaurant.
+- When I tap Retry payment, Then payment is attempted again.
+- When I tap Cancel order, Then the order status becomes Cancelled and no money is taken.
+
+Traceability: BR-04, FR-06, UC-08, RULE-02, UAT-06",,0,0,0,,0,0,0,,,{},,0|i0003w:,DE Sprint 3,,3.0,,,10023,DE-8,Payment & Reversal,Done,06/Nov/26 9:36 PM
+See in-app message when payment fails,DE-28,10013,Story,Done,DE,DeliverEats Agile,software,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,,Medium,Done,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,Anandu Priyakumar,712020:5fad1b1e-f738-4df4-9c21-e0816f87e2f8,06/Nov/26 3:41 PM,06/Nov/26 9:36 PM,06/Nov/26 7:39 PM,06/Nov/26 9:36 PM,,0,BR-08,FR-10,RULE-03,UAT-06,UC-08,,"As a customer, I want an immediate in-app message when my payment fails, so that I know what happened and what to do.
+
+Acceptance criteria
+- Given my payment fails, Then a 'Payment failed' message is shown immediately in the app (RULE-03).
+- The message states that no money was taken and offers retry or cancel.
+
+Traceability: BR-08, FR-10, UC-08, RULE-03, UAT-06",,0,0,0,,0,0,0,,,{},,0|i00040:,DE Sprint 3,,2.0,,,10010,DE-10,Order Status & Messages,Done,06/Nov/26 9:36 PM
